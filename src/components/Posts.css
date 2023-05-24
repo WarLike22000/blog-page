@@ -1,0 +1,7 @@
+.transitionImg:hover img {
+    transform: rotate(45deg);
+}
+
+.heightPost {
+    height: 415px;
+}

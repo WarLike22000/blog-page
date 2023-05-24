@@ -1,0 +1,43 @@
+.marginCSS {
+    width: calc(100% - 100px);
+}
+
+.iconCSS div {
+    margin: 0 10px;
+    border: 1px solid rgb(202, 202, 202);
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.iconCSS div:hover {
+    background-color: rgba(200, 236, 245, 0.923);
+}
+
+.serviceCSS {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.serviceCSS h5 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.serviceCSS div {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.serviceCSS div p {
+    color: #000;
+    transition: all 0.3s;
+}
+
+.serviceCSS div p:hover {
+    color: #0000008f;
+}
