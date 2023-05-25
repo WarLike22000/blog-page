@@ -27,19 +27,20 @@ const Footer = () => {
             <div className='flex lg:flex-row flex-col justify-between items-center w-full my-16'>
                 <div>
                     <h1 className=' font-semibold text-xl text-center lg:text-left'>LOGO</h1>
-                    <p className=' font-medium mt-1'>You can use other facilities.</p>
+                    <p className=' font-medium text-center lg:text-left mt-1'>You can use other facilities.</p>
                 </div>
                 <div className='flex justify-between items-center flex-wrap md:flex-nowrap my-8'>
                     <div className='mr-8 serviceCSS'>
                         <h5>Product</h5>
                         <div><p>Overview</p></div>
                         <div><p>Features</p></div>
-                        <div>
+                        <div className='flex items-center'>
                             <p>Solutions</p>
-                            <span>New</span>
+                            <span className='ml-2 border-2 transition-all hover:bg-sky-50 border-black/75 px-3 rounded-full'>New</span>
                         </div>
                         <div><p>Tutorials</p></div>
                         <div><p>Pricing</p></div>
+                        <div><p>Released</p></div>
                     </div>
                     <div className='mr-8 serviceCSS'>
                         <h5>Company</h5>

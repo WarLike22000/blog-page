@@ -36,6 +36,7 @@
 .serviceCSS div p {
     color: #000;
     transition: all 0.3s;
+    width: fit-content;
 }
 
 .serviceCSS div p:hover {

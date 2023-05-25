@@ -1,0 +1,54 @@
+.transformCss img {
+    transition: all 0.3s;
+}
+
+.transformCss:hover img {
+    transform: rotate(-180deg);
+}
+
+.mouseCss {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    box-shadow: 2px 2px 25px rgba(128, 128, 128, 0.501);
+    animation: fade 0.2s forwards;
+}
+
+.mouseCss img {
+    width: 27px;
+}
+
+.mouseCss nav {
+    display: flex;
+}
+
+.mouseCss div {
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.mouseCss div:hover {
+    background-color: rgba(170, 252, 225, 0.43);
+}
+
+.mouseCss div p {
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.mouseCss div span {
+    font-size: small;
+    font-weight: 500;
+    color: gray;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        top: 52px;
+    }
+    100% {
+        opacity: 1;
+        top: 32px;
+    }
+}
