@@ -42,6 +42,30 @@
     color: gray;
 }
 
+.collapseCSS img {
+    width: 27px;
+}
+
+.collapseCSS nav {
+    display: flex;
+}
+
+.collapseCSS div {
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.collapseCSS p {
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.collapseCSS div span {
+    font-size: small;
+    font-weight: 500;
+    color: gray;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
