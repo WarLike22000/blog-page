@@ -46,7 +46,7 @@ const Navbar = () => {
                             <p className='font-medium'>Products</p>
                             <img className={`w-3 ml-2 ${clickProduct && 'rotate-180'} transition-all`} src={arrowDown} alt='arrDown' />
                         </Link>
-                        <Collapse in={clickProduct}>
+                        <Collapse onClick={closeHandler} in={clickProduct}>
                             <div className='collapseCSS'>
                                 <div>
                                     <nav>
@@ -87,7 +87,7 @@ const Navbar = () => {
                             <p className='font-medium'>Resources</p>
                             <img className={`w-3 ml-2 ${clickResources && 'rotate-180'} transition-all`} src={arrowDown} alt='arrDown' />
                         </Link>
-                        <Collapse in={clickResources}>
+                        <Collapse onClick={closeHandler} in={clickResources}>
                         <div className='collapseCSS'>
                             <div>
                                 <nav>
@@ -228,10 +228,10 @@ const Navbar = () => {
             
             <div className='flex items-center'>
                 <div className='hidden md:flex py-2 px-3 rounded-full transition-all text-base font-medium cursor-pointer'>
-                    <Link to='#'>Log in</Link>
+                    <Link to='/login'>Log in</Link>
                 </div>
                 <div className=' hidden md:flex mx-5 py-2 px-3 rounded-full text-white bg-black/80 hover:bg-black/70 transition-all text-base cursor-pointer'>
-                    <Link to='#'>Sign up</Link>
+                    <Link to='/signUp'>Sign up</Link>
                 </div>
                 <div onClick={() => setOpen(!open)} className=' lg:hidden ml-6 cursor-pointer rounded-full transition-all flex items-center justify-center w-11 hover:bg-sky-50'>
                     <img className='w-9 m-1' src={menu} alt='menu' />
