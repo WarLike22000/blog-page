@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
