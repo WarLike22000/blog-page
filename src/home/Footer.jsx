@@ -18,7 +18,7 @@ const Footer = () => {
                     <p className=' dark:text-white/80 font-medium text-gray-600 mt-2'>Join our 4000+ people.</p>
                 </div>
                 <div className='mt-10 md:w-1/2'>
-                    <div className=' border-2 rounded-full w-full flex justify-between shadow-lg dark:shadow-white/10 hover:shadow-none transition-all'>
+                    <div className='bg-white border-2 rounded-full w-full flex justify-between shadow-lg dark:shadow-white/10 hover:shadow-none transition-all'>
                         <input className='px-3 w-full py-2 outline-none border-none rounded-full' placeholder='Enter your email' />
                         <button className='p-3 bg-black hover:bg-black/75 transition-all text-white rounded-full'>Subscribe</button>
                     </div>

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Divider, Drawer, Collapse } from '@mui/material';
 //assets
-import arrowDown from '../assets/chevron-down-svgrepo-com.svg';
-import menu from '../assets/align-right-svgrepo-com.svg';
+import arrowDown from '../assets/down-arrow.png';
+import arrowDown2 from '../assets/down-arrow (1).png';
+import menu from '../assets/menu.png';
+import menu2 from '../assets/menu (1).png';
 //assetsNavbar
 import overview from '../assets/Navbar/file.png';
 import features from '../assets/Navbar/new-features.png';
@@ -17,7 +19,7 @@ import helpCentre from '../assets/Navbar/call-centre.png';
 //styles
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ( { checked } ) => {
 
     const [open, setOpen] = useState(false);
     const [openProduct, setOpenProduct] = useState(false);
@@ -33,7 +35,7 @@ const Navbar = () => {
     }
     
     return (
-        <div className='sticky top-0 z-10 backdrop-blur dark:bg-cyan-700/60 bg-white/60 flex justify-between items-center py-5'>
+        <div className='sticky top-0 z-10 backdrop-blur dark:bg-slate-900/60 bg-white/60 flex justify-between items-center py-5'>
             <Drawer className='backdrop-blur-md' open={open} onClose={closeHandler} anchor='top'>
                 <div className='py-5'>
                     <div onClick={() => setOpen(false)} className='mx-4 py-2 hover:bg-sky-100  cursor-pointer px-3 rounded'>
@@ -153,7 +155,7 @@ const Navbar = () => {
                     <div onMouseEnter={() => setOpenProduct(true)} onMouseLeave={() => setOpenProduct(false)} className='dark:hover:text-black dark:text-white relative transformCss mx-4 hover:bg-sky-100  cursor-pointer py-1 px-3 rounded'>
                         <Link to='#'  className='flex items-center'>
                             <p className='font-medium'>Products</p>
-                            <img className='w-3 ml-2' src={arrowDown} alt='arrDown' />
+                            <img className='w-3 ml-2' src={checked ? arrowDown2 : arrowDown} alt='arrDown' />
                         </Link>
                         <div className={`${openProduct ? 'flex' : 'hidden'} w-96 bg-white rounded flex-col mouseCss`}>
                             <div>
@@ -192,7 +194,7 @@ const Navbar = () => {
                     <div onMouseEnter={() => setOpenResources(true)} onMouseLeave={() => setOpenResources(false)} className='dark:hover:text-black dark:text-white relative transformCss mx-4 hover:bg-sky-100  cursor-pointer py-1 px-3 rounded'>
                         <Link to='#'  className='  flex items-center'>
                             <p className='font-medium'>Resources</p>
-                            <img className='w-3 ml-2' src={arrowDown} alt='arrDown' />
+                            <img className='w-3 ml-2' src={checked ? arrowDown2 : arrowDown} alt='arrDown' />
                         </Link>
                         <div className={`${openResources ? 'flex' : 'hidden'} w-96 bg-white rounded flex-col mouseCss`}>
                             <div>
@@ -243,8 +245,8 @@ const Navbar = () => {
                 <div className=' hidden md:flex mx-5 py-2 px-3 rounded-full dark:bg-white dark:text-black font-semibold text-white bg-black/80 hover:bg-black/70 dark:hover:bg-sky-100  text-base cursor-pointer'>
                     <Link to='/signUp'>Sign up</Link>
                 </div>
-                <div onClick={() => setOpen(!open)} className=' lg:hidden ml-6 cursor-pointer rounded-full  flex items-center justify-center w-11 hover:bg-sky-50'>
-                    <img className='w-9 m-1' src={menu} alt='menu' />
+                <div onClick={() => setOpen(!open)} className=' lg:hidden ml-6 cursor-pointer rounded-full  flex items-center justify-center w-11'>
+                    <img className='w-9 m-1' src={checked ? menu2 : menu} alt='menu' />
                 </div>
             </div>
         </div>

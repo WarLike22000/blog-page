@@ -24,13 +24,13 @@ const App = () => {
   
   return (
     <div className={`${checked && 'dark'}`}>
-      <div className='dark:bg-black/95'>
+      <div className='dark:bg-slate-900'>
         <Container maxWidth='xl'>
           <div className='fixed z-20 right-20 md:right-72 top-8'>
             <input id='toggle' type='checkbox' onChange={changeHandler}  />
             <label htmlFor='toggle' />
           </div>
-            <Navbar />
+            <Navbar checked={checked} />
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/:slug' element={<Post />} />
