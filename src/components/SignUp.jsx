@@ -35,10 +35,22 @@ const SignUp = () => {
     useEffect(() => {
         setErrors(validation(data))
     }, [data])
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if(data) {
+            setTouched({
+                fullName: true,
+                email: true,
+                password: true,
+                phoneNumber: true
+            })
+        }
+    };
     
     return (
         <div className='w-full h-screen flex justify-center items-center'>
-            <div className='dark:shadow-xl dark:shadow-white/20 bg-white/80 dark:bg-white/10 inputCSS'>
+            <form onSubmit={submitHandler} className='dark:shadow-xl dark:shadow-white/20 bg-white/80 dark:bg-white/10 inputCSS'>
                 <span className='block text-2xl mb-10 text-center w-full dark:text-white'>Logo</span>
                 <div>
                     <input className='dark:text-white' type='text' name='fullName' value={data.fullName} placeholder='Full Name' onFocus={focusHandler} onChange={changeHandler} />
@@ -57,10 +69,10 @@ const SignUp = () => {
                     <span className='block w-fit h-5 ml-2 mt-1' >{errors && touched.phoneNumber && <span className='block w-fit h-5 text-xs text-red-500'>{errors.phoneNumber}</span>}</span>
                 </div>
                 <section className='flex justify-between items-center'>
-                    <Link className='outline-none text-sm font-medium px-5 py-2 border rounded-lg bg-sky-100 hover:bg-sky-200 transition-all' to='/login'>Login</Link>
-                    <button className=' px-5 py-2 rounded-lg bg-sky-100 text-sm font-medium hover:bg-white'>Sign Up</button>
+                    <Link className='outline-none text-sm font-medium px-5 py-2 rounded-lg text-sky-400 hover:text-sky-300 transition-all' to='/login'>Login</Link>
+                    <button type='submit' className=' px-5 py-2 rounded-lg bg-sky-100 text-sm font-medium hover:bg-white'>Sign Up</button>
                 </section>
-            </div>
+            </form>
         </div>
     );
 };
