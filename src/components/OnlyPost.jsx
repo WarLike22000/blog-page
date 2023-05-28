@@ -10,9 +10,9 @@ const OnlyPost = ( { data } ) => {
     const { coverImage: { url }, title, excerpt, slug } = data;
     
     return (
-        <div className=' max-w-xs overflow-hidden rounded mx-2 my-8 shadow-lg flex flex-col justify-end'>
+        <div className=' max-w-sm overflow-hidden rounded mx-2 bg-white/80 my-8 shadow-lg flex flex-col justify-end'>
             <div>
-                <img className='sm:max-w-xs w-96' src={url} alt='coverImg' />
+                <img className='sm:max-w-sm w-96 mt-2' src={url} alt='coverImg' />
             </div>
             <div>
                 <div className='mx-2'>

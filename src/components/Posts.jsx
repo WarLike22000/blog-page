@@ -11,7 +11,7 @@ const Posts = ( { post } ) => {
     const { coverImage: { url }, author: { name }, date, title, excerpt, slug } = post;
     
     return (
-        <div className='shadow-lg sm:w-96 w-72 m-5 flex flex-col justify-end heightPost cursor-pointer transition-all rounded-md overflow-hidden'>
+        <div className='dark:bg-white/80 dark:shadow-white/20 shadow-lg sm:w-96 w-72 m-5 flex flex-col justify-end heightPost cursor-pointer transition-all rounded-md overflow-hidden'>
             <div className=' h-60 bg-contain relative' style={{ backgroundImage: `url(${url})` }}>
                 <div className='backdrop-blur absolute bottom-0 bg-white/5 w-full p-3'>
                     <p className='text-white font-semibold'>{name}</p>

@@ -34,11 +34,11 @@
 }
 
 .serviceCSS div p {
-    color: #000;
+    /* color: #000; */
     transition: all 0.3s;
     width: fit-content;
 }
 
 .serviceCSS div p:hover {
-    color: #0000008f;
+    color: #90909077;
 }

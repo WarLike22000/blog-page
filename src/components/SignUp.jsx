@@ -38,22 +38,22 @@ const SignUp = () => {
     
     return (
         <div className='w-full h-screen flex justify-center items-center'>
-            <div className='inputCSS'>
-                <span className='block text-2xl mb-10 text-center w-full'>Logo</span>
+            <div className='dark:shadow-xl dark:shadow-white/20 bg-white/80 dark:bg-white/10 inputCSS'>
+                <span className='block text-2xl mb-10 text-center w-full dark:text-white'>Logo</span>
                 <div>
-                    <input type='text' name='fullName' value={data.fullName} placeholder='Full Name' onFocus={focusHandler} onChange={changeHandler} />
+                    <input className='dark:text-white' type='text' name='fullName' value={data.fullName} placeholder='Full Name' onFocus={focusHandler} onChange={changeHandler} />
                     <span className='block w-fit h-5 ml-2 mt-1' >{errors && touched.fullName && <span className='block w-fit h-5 text-xs text-red-500'>{errors.fullName}</span>}</span>
                 </div>
                 <div>
-                    <input type='email' name='email' value={data.email} placeholder='Email' onFocus={focusHandler} onChange={changeHandler} />
+                    <input className='dark:text-white' type='email' name='email' value={data.email} placeholder='Email' onFocus={focusHandler} onChange={changeHandler} />
                     <span className='block w-fit h-5 ml-2 mt-1' >{errors && touched.email && <span className='block w-fit h-5 text-xs text-red-500'>{errors.email}</span>}</span>
                 </div>
                 <div>
-                    <input type='password' name='password' value={data.password} placeholder='Password' onFocus={focusHandler} onChange={changeHandler} />
+                    <input className='dark:text-white' type='password' name='password' value={data.password} placeholder='Password' onFocus={focusHandler} onChange={changeHandler} />
                     <span className='block w-fit h-5 ml-2 mt-1' >{errors && touched.password && <span className='block w-fit h-5 text-xs text-red-500'>{errors.password}</span>}</span>
                 </div>
                 <div>
-                    <input type='text' name='phoneNumber' value={data.phoneNumber} placeholder='Phone Number' onFocus={focusHandler} onChange={changeHandler} />
+                    <input className='dark:text-white' type='text' name='phoneNumber' value={data.phoneNumber} placeholder='Phone Number' onFocus={focusHandler} onChange={changeHandler} />
                     <span className='block w-fit h-5 ml-2 mt-1' >{errors && touched.phoneNumber && <span className='block w-fit h-5 text-xs text-red-500'>{errors.phoneNumber}</span>}</span>
                 </div>
                 <section className='flex justify-between items-center'>
