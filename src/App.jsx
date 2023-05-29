@@ -32,8 +32,8 @@ const App = () => {
           </div>
             <Navbar checked={checked} />
             <Routes>
-              <Route path='/' element={<Main />} />
-              <Route path='/:slug' element={<Post />} />
+              <Route path='/' element={<Main checked={checked} />} />
+              <Route path='/:slug' element={<Post checked={checked} />} />
               <Route path='/signUp' element={<SignUp />} />
               <Route path='/login' element={<Login />} />
             </Routes>

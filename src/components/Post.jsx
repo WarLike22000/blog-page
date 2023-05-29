@@ -1,4 +1,6 @@
 import React from 'react';
+import { ThreeDots } from 'react-loader-spinner';
+
 import { useParams } from 'react-router-dom';
 import { GET_POST } from '../graphQL/queries';
 import { useQuery } from '@apollo/client';
@@ -9,7 +11,7 @@ import OnlyPost from './OnlyPost';
 //assets gif
 import loader from '../assets/gif/Double Ring-2.6s-200px.svg';
 
-const Post = () => {
+const Post = ( { checked } ) => {
 
     const { slug } = useParams();
     const { loading, data, error } = useQuery(GET_POST, {
@@ -49,7 +51,16 @@ const Post = () => {
             </div>
         </div> :
             <div className='flex justify-center items-center h-screen'>
-                <img className='w-28' src={loader} alt='loading...' />
+                <ThreeDots 
+                        height="80" 
+                        width="80" 
+                        radius="9"
+                        color={checked ? '#9DB2BF' : '#27374D'} 
+                        ariaLabel="three-dots-loading"
+                        wrapperStyle={{}}
+                        wrapperClassName=""
+                        visible={true}
+                        />
             </div>
 
         }
